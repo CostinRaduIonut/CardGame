@@ -1,0 +1,232 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.start-game-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: #000000;
+    opacity: .5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.start-game-overlay-content {
+    background-color: #000000aa;
+    border-radius: 1rem;
+    border: .5rem solid white;
+    position: absolute;
+    top: 20%;
+    left: 23vw;
+    width: 50vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    opacity: 1 !important;
+    z-index: 4;
+}
+
+.start-game-overlay-content > h1 {
+    text-align: center;
+    padding: 0;
+    color: #ffff;
+    font-size: 5rem;
+    text-shadow: 2px 2px 2px #3bfc00;
+    opacity: 1 !important;
+    z-index: 5;
+}
+
+.start-game-overlay-content > button {
+    background-color: #00000000;
+    border: none;
+    color: rgb(255, 230, 0);
+    text-shadow: 2px 2px 2px rgb(255, 230, 0);
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2rem;
+    margin: 1rem 2rem;
+    cursor: pointer;
+    opacity: 2 !important;
+    z-index: 6;
+    margin-left:40%;
+}
+
+.status-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1rem;
+    background-color: black;
+    height: 4rem;
+}
+
+.status-bar-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 2;
+}
+
+.status-bar-dev-buttons {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+.player-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    background-color: #70a18e;
+}
+
+.player-area > h1 {
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.error {
+    text-transform: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 197, 197);
+}
+
+.glove-svg > img {
+    position: relative;
+    top: 3.5rem;
+}
+
+.glove-svg > h1 {
+    position: relative;
+    top: -7rem;
+    left: 0rem;
+    z-index: 1;
+    color: #fff;
+    font-size: 5rem;
+    margin: 0;
+    padding: 0;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.player-count {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #2fb44c;
+    text-transform: lowercase;
+}
+
+.player-1-cards-container, .player-2-cards-container {
+    background-color: #b3fade;
+    overflow-y: hidden;
+    width: 75vw;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.player-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-height: 280px;
+}
+
+.player-card {
+    display: inline-block;
+}
+
+
+.player-card > img {
+    scale: .7;
+    margin-right: -1rem;
+    margin-top: -1rem;
+    transition: 500ms;
+}
+
+.player-card > img:hover {
+    /* border: 5px solid #ff00ff; */
+    cursor: pointer;
+    scale: .75;
+    transition: 500ms;
+}
+
+.playing-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    background-color: #535353;
+}
+
+.draw-button {
+    background-color: #535353;
+    margin-left: 1rem;
+    z-index: 1;
+}
+
+.draw-button > button {
+    background-color: #535353;
+    border: none;
+}
+
+.draw-button > button:enabled > img:hover {
+    scale: 1.05;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.draw-button > button:enabled > img {
+    transition: 500ms;
+}
+
+.draw-button > button:disabled > img {
+    filter: grayscale(100%);
+}
+
+.discard-pile {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    height: 10rem;
+    width: 40vw;
+    z-index: 0;
+}
+
+.discarded-card {
+    display: inline-block;
+}
+
+.discarded-card > img {
+    margin-right: -5rem;
+    scale: .55;
+    margin-top: 0rem;
+    transition: 500ms;
+}
+
+.active-wildcard {
+    border: 8px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #ffee00, #ff7231);
+    transition: 300ms ease-in-out;
+}
