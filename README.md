@@ -19,7 +19,7 @@ To install and run the project, you must have the following:
 
 ## HOW TO INSTALL AND RUN THE PROJECT
 - To install the project, open a terminal, navigate to the path you want it to be, and type the command:
-### `git clone https://CostinRaduIonut@bitbucket.org/radup-ensemble/tech-test-ionut-costin.git`
+### `git clone https://github.com/CostinRaduIonut/CardGame.git`
 
 - To run the project, you must open a new terminal, navigate to the project's directory, and run the following:
 ### `npm i`
